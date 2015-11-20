@@ -6,6 +6,7 @@ from book.forms import UserForm, UserProfileForm
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
 # Create your views here.
 from django.http import HttpResponse
@@ -19,7 +20,7 @@ def index(request):
     context_dict = {'categories': category_list}
 
     # Render the response and send it back!
-    return render(request, 'book/index.html', context_dict)
+    return render(request, 'book/base.html/index.html', context_dict)
 
 def category(request, category_name_slug):
 

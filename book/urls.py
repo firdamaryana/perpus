@@ -1,5 +1,11 @@
 from django.conf.urls import patterns, url
 from book import views
+from registration.backends.simple.views import RegistrationView
+
+# Create a new class that redirects the user to the index page, if successful at logging
+class MyRegistrationView(RegistrationView):
+    def get_success_url(self,request, user):
+        return '/book/'
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
@@ -9,4 +15,4 @@ urlpatterns = patterns('',
     url(r'^login/$', views.user_login, name='login'),
     url(r'^restricted/', views.restricted, name='restricted'),
     url(r'^logout/$', views.user_logout, name='logout'),
-    )
+)
