@@ -33,6 +33,7 @@ class PageForm(forms.ModelForm):
         #or specify the fields to include (i.e. not include the category field)
         #fields = ('title', 'url', 'views')
 
+
 class PageForm(forms.ModelForm):
     def clean(self):
         cleaned_data = self.cleaned_data

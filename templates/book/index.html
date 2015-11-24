@@ -12,42 +12,39 @@
 {% if user.is_authenticated %}
     <div class="page-header">
 
-                <h1>Wellcome to Django Framework {{ user.username }}!</h1>
+                <h1>Welcome to Django Framework {{ user.username }}!</h1>
             {% else %}
-                <h1>Wellcome to Django Framework!</h1>
+                <h1>Welcome to Django Framework!</h1>
             {% endif %}
 </div>
 
          <div class="panel panel-primary">
-    <div class="panel-heading">
-            <h3 class="panel-title">Categories</h3>
-    </div>
-</div>
+            <div class="panel-heading">
+               <h4 class="panel-title">Categories</h4>
 
               {% if categories %}
-                     <ul class="list-group"> 
+                    <ul class="list-group">
                         {% for category in categories %}
                          <li class="list-group-item"><a href="{% url 'category'  category.slug %}">{{ category.name }}</a></li>
                         {% endfor %}
                     </ul>
                 {% else %}
-                    <strong>There are no categories.</strong>
+                    <strong>There are no categories present.</strong>
                 {% endif %}
 
-  <div class="panel panel-primary">
-            <div class="panel-heading">
-                    <h3 class="panel-title">Pages</h3>
             </div>
-    </div>
+	<div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title">Pages</h4>
 
                 {% if pages %}
-                    <ul class="list-group"> 
+                    <ul class="list-group">
                         {% for page in pages %}
                          <li class="list-group-item"><a href="{{page.url}}">{{ page.title }}</a></li>
                         {% endfor %}
                     </ul>
                 {% else %}
-                    <strong>There are no categories.</strong>
+                    <strong>There are no categories present.</strong>
                 {% endif %}
             </div>
 
