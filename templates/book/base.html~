@@ -1,3 +1,7 @@
+    <div class="col-sm-3 col-md-2 sidebar">
+
+    </div>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,6 +47,7 @@
                         <li><a href="{% url 'registration_register' %}">Register Here</a></li>
                         <li><a href="{% url 'auth_login' %}">Login</a></li>
                     {% endif %}
+                                <li><a href="{% url 'about' %}">About</a></li>
 
               </ul>
         </div>
@@ -62,6 +67,8 @@
         </div>
       </div>
     </div>
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

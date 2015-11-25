@@ -64,6 +64,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'book',
     'registration',
+    'bootstrap_toolkit',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -85,7 +86,7 @@ WSGI_APPLICATION = 'perpus.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+  'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'perpus',
 	'USER': 'root',
